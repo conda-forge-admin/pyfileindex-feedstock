@@ -26,12 +26,14 @@ requirements:
     - pandas
   run:
     - python >=${{ python_min }}
-    - pandas >=1.5.3,<=3.0.5
+    - pandas >=1.5.3,<=3.0.6
 tests:
   - python:
       imports:
         - pyfileindex
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
